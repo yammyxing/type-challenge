@@ -9,6 +9,8 @@ type Bar = {
   c: boolean
 }
 
+type A = Merge<Foo, Bar>
+
 type cases = [
   Expect<Equal<Merge<Foo, Bar>, {
     a: number
