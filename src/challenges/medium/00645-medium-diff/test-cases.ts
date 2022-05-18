@@ -14,6 +14,8 @@ type Coo = {
   gender: number
 }
 
+ type D = Diff<Foo, Bar>
+
 type cases = [
   Expect<Equal<Diff<Foo, Bar>, { gender: number }>>,
   Expect<Equal<Diff<Bar, Foo>, { gender: number }>>,
