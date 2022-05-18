@@ -1,7 +1,7 @@
 import type { Equal, Expect } from '@type-challenges/utils'
 
 type cases = [
-  Expect<Equal<AnyOf<[1, 'test', true, [1], { name: 'test' }, { 1: 'test' }]>, true>>,
+  Expect<Equal<AnyOf<[1, 'test', true, null, undefined, [1], { name: 'test' }, { 1: 'test' }]>, true>>,
   Expect<Equal<AnyOf<[1, '', false, [], {}]>, true>>,
   Expect<Equal<AnyOf<[0, 'test', false, [], {}]>, true>>,
   Expect<Equal<AnyOf<[0, '', true, [], {}]>, true>>,
