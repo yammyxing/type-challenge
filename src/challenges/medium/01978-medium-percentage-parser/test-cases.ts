@@ -13,6 +13,8 @@ type Case9 = ['', '', '%']
 type Case10 = ['', '1', '']
 type Case11 = ['', '100', '']
 
+type P = PercentageParser<'+100'>
+
 type cases = [
   Expect<Equal<PercentageParser<''>, Case0>>,
   Expect<Equal<PercentageParser<'+'>, Case1>>,
