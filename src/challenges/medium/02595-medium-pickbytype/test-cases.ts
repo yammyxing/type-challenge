@@ -7,6 +7,8 @@ interface Model {
   isEnable: boolean
 }
 
+type E = PickByType<Model, string>
+
 type cases = [
   Expect<Equal<PickByType<Model, boolean>, { isReadonly: boolean; isEnable: boolean }>>,
   Expect<Equal<PickByType<Model, string>, { name: string }>>,
