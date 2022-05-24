@@ -1,5 +1,4 @@
 import type { Equal, Expect } from '@type-challenges/utils'
-import { ExpectFalse, NotEqual } from '@type-challenges/utils'
 
 interface User {
   name: string
@@ -18,6 +17,8 @@ interface UserPartialNameAndAge {
   age?: number
   address: string
 }
+
+type A = PartialByKeys<User, 'name'>
 
 type cases = [
   Expect<Equal<PartialByKeys<User, 'name'>, UserPartialName>>,
