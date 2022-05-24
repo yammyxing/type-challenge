@@ -1,5 +1,6 @@
 import type { Equal, Expect } from '@type-challenges/utils'
-import { ExpectFalse, NotEqual } from '@type-challenges/utils'
+
+type E =  'ab' extends 'abc' ? true : false
 
 type cases = [
   Expect<Equal<StartsWith<'abc', 'ac'>, false>>,
