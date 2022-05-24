@@ -1,5 +1,4 @@
 import type { Equal, Expect } from '@type-challenges/utils'
-import { ExpectFalse, NotEqual } from '@type-challenges/utils'
 
 interface Model {
   name: string
@@ -8,6 +7,8 @@ interface Model {
 }
 
 type ModelEntries = ['name', string] | ['age', number] | ['locations', string[] | null]
+
+type M = ObjectEntries<Model>
 
 type cases = [
   Expect<Equal<ObjectEntries<Model>, ModelEntries>>,
