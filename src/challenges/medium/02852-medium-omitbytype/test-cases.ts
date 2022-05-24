@@ -1,5 +1,4 @@
 import type { Equal, Expect } from '@type-challenges/utils'
-import { ExpectFalse, NotEqual } from '@type-challenges/utils'
 
 interface Model {
   name: string
@@ -7,6 +6,9 @@ interface Model {
   isReadonly: boolean
   isEnable: boolean
 }
+
+type M = PickByType<Model, boolean>
+type O = OmitByType<Model, boolean>
 
 type cases = [
   Expect<Equal<OmitByType<Model, boolean>, { name: string; count: number }>>,
