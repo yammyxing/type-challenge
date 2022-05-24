@@ -12,6 +12,9 @@ interface Todo1 {
 
 type List = [1, 2, 3]
 
+type R = Readonly<Todo1>
+type R1 = Readonly<List>
+
 type cases = [
   Expect<Equal<Mutable<Readonly<Todo1>>, Todo1>>,
   Expect<Equal<Mutable<Readonly<List>>, List>>,
