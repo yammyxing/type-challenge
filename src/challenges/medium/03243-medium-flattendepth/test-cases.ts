@@ -1,5 +1,7 @@
 import type { Equal, Expect } from '@type-challenges/utils'
 
+type P = FlattenOnce<[1, 2, [3, 4], [[[5]]]]>
+
 type cases = [
   Expect<Equal<FlattenDepth<[]>, []>>,
   Expect<Equal<FlattenDepth<[1, 2, 3, 4]>, [1, 2, 3, 4]>>,
