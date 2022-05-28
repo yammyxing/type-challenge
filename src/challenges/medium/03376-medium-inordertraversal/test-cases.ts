@@ -40,6 +40,8 @@ const tree4 = {
   },
 } as const
 
+type T = InorderTraversal<typeof tree1>
+
 type cases = [
   Expect<Equal<InorderTraversal<null>, []>>,
   Expect<Equal<InorderTraversal<typeof tree1>, [1, 3, 2]>>,
